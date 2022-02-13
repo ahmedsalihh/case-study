@@ -1,0 +1,14 @@
+.product-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.pagination-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-top: 32px;
+}

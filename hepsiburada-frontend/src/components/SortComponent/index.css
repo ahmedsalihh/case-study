@@ -1,0 +1,34 @@
+.sortContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 34px;
+}
+
+.sortContainer-header {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  /* or 150% */
+
+  color: #484848;
+  margin-bottom: 20px;
+}
+
+.sortContainer-list li {
+  cursor: pointer;
+  list-style-type: none;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  /* or 171% */
+
+  color: #646464;
+}
+
+.selected {
+  color: #ff6000 !important;
+}

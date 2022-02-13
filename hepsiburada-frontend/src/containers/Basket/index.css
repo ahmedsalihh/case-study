@@ -1,0 +1,112 @@
+.notification {
+  background-color: #ffffff;
+  color: #b0b0b0;
+  text-decoration: none;
+  padding: 15px 26px;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  border: 1px solid #b0b0b0;
+  box-sizing: border-box;
+  border-radius: 4px;
+  min-width: 120px;
+  min-height: 48px;
+}
+
+.notification .badge {
+  position: absolute;
+  line-height: 18px;
+  text-align: center;
+  height: 18px;
+  width: 18px;
+  top: -10px;
+  right: -10px;
+  font-size: 12px;
+  border-radius: 50%;
+  background-color: #ff6000;
+  color: white;
+}
+
+.basket:hover .notification {
+  z-index: 2;
+  border-bottom: none;
+}
+
+.basket:hover .basket-content {
+  display: block;
+  margin-top: -3px;
+}
+
+.basket-content {
+  display: none;
+  position: absolute;
+  right: 80px;
+  min-width: 360px;
+  background: #ffffff;
+  border: 1px solid #b0b0b0;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 21px 105px 21px 21px;
+  margin-top: -1px;
+  z-index: 1;
+}
+
+.basket-content__item {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+  min-height: 72px;
+}
+
+.basket-content__item-imageContainer {
+  display: flex;
+  align-items: center;
+  width: 54px;
+  height: 72px;
+  padding: 7px 7px 5.77px 7px;
+  border: 1px solid #e5e5e5;
+}
+
+.basket-content__item-imageContainer img {
+  width: 40px;
+  height: 59.23px;
+}
+
+.basket-content__item-contentContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 10px;
+}
+
+.basket-content__item-contentContainer-title {
+  width: 170px;
+  height: 32px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+  /* or 150% */
+
+  color: #484848;
+}
+
+.basket-content__item-contentContainer-button {
+  width: 49px;
+  height: 18px;
+
+  background: #ffffff;
+  border: 1px solid #f90000;
+  border-radius: 4px;
+  color: #f90000;
+}
+
+.basket-content__item-contentContainer-button:hover {
+  background-color: #ffc199;
+  transition: 0.7s;
+}
+
+.basket-content__item-contentContainer-button:active {
+  background-color: #ffa368;
+}

@@ -1,0 +1,42 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 52px;
+  margin-top: 17px;
+}
+
+.header__headerLeft {
+  display: flex;
+  flex-direction: column;
+}
+
+.header__headerLeft-title {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 100%;
+  /* or 28px */
+
+  color: #484848;
+}
+
+.header__headerLeft-subTitle {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 100%;
+  /* identical to box height, or 15px */
+
+  display: flex;
+  align-items: center;
+
+  color: #b0b0b0;
+}
+
+.header__headerLeft-subTitle span {
+  color: #484848;
+}

@@ -1,0 +1,34 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-width: 206px;
+}
+
+.sidebar__colorContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar__colorContainer-header {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  /* or 150% */
+
+  color: #484848;
+  margin-bottom: 20px;
+}
+
+.sidebar__colorContainer-list {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  /* or 171% */
+
+  color: #646464;
+}

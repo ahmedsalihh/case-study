@@ -1,0 +1,17 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 96px;
+  padding-left: 80px;
+  padding-right: 80px;
+
+  background: #ffffff;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.35);
+}
+
+.navbar__logo {
+  height: 35px;
+  width: 211.52px;
+}

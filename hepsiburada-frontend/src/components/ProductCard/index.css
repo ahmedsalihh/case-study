@@ -1,0 +1,163 @@
+.productCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 254px;
+  min-height: 472px;
+  margin-left: 14px;
+  margin-bottom: 14px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.productCard__image {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 254px;
+  min-height: 339px;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.productCard__productInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0px 15px 0px 15px;
+}
+
+.productCard__productInfo-title {
+  min-height: 32px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+
+  color: #484848;
+}
+
+.productCard__productInfo-specs {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  margin-bottom: 13px;
+}
+
+.productCard__productInfo-specs__container {
+  display: flex;
+  flex-direction: row;
+}
+
+.productCard__productInfo-specs-title {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 18px;
+  /* or 150% */
+
+  color: #484848;
+}
+
+.productCard__productInfo-specs-value {
+  font-family: Roboto;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 18px;
+  /* or 150% */
+
+  color: #484848;
+}
+
+.productCard__productPrice__container {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 5px 0px 15px;
+}
+
+.productCard__productPrice-netPrice {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+  /* or 129% */
+
+  color: #000000;
+}
+
+.productCard__productPrice-grossPrice {
+  display: flex;
+  flex-direction: row;
+}
+
+.productCard__productPrice-netPrice {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+  /* or 129% */
+
+  color: #000000;
+}
+
+.productCard__productPrice-grossPrice-price {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 18px;
+  /* or 138% */
+
+  text-decoration-line: line-through;
+
+  color: #9b9b9b;
+}
+
+.productCard__productPrice-grossPrice-discount {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 18px;
+  /* or 150% */
+
+  color: #f90000;
+}
+
+.hoverContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 254px;
+  min-height: 472px;
+  margin-left: 14px;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  box-sizing: border-box;
+  cursor: pointer;
+  padding-bottom: 10px;
+}
+
+.hoverContent__image {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 254px;
+  min-height: 339px;
+  /* border: 1px solid #e5e5e5; */
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.hoverContent__button {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0px 15px 0px 15px;
+  min-height: 102px;
+}

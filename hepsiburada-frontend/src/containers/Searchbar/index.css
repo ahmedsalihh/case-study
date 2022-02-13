@@ -1,0 +1,24 @@
+.input-icons img {
+  position: absolute;
+  width: 17.5px;
+  height: 17.5px;
+}
+
+.input-icons {
+  position: relative;
+  padding: 15px 27px 15px 27px;
+}
+
+.icon {
+  padding: 15px 15px 11.5px 27px;
+}
+
+.input-field {
+  height: 42px;
+  width: 632px;
+  max-width: 632px;
+  padding-left: 60px;
+  border-radius: 100px;
+  background-color: #eeeeee;
+  border: 0px;
+}
