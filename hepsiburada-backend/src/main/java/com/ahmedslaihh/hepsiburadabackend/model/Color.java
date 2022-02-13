@@ -21,8 +21,4 @@ public class Color {
     private Long id;
 
     private String name;
-
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "color", cascade = CascadeType.ALL)
-    @JsonIgnoreProperties({"color", "brand", "price"})
-    private List<Product> productList = new ArrayList<>();
 }
