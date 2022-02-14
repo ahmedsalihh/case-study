@@ -1,4 +1,4 @@
-package com.ahmedslaihh.hepsiburadabackend;
+package com.ahmedsalihh.hepsiburadabackend;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,15 +1,16 @@
-package com.ahmedslaihh.hepsiburadabackend.service.serviceImpl;
+package com.ahmedsalihh.hepsiburadabackend.service.serviceImpl;
 
-import com.ahmedslaihh.hepsiburadabackend.converter.BrandConverter;
-import com.ahmedslaihh.hepsiburadabackend.converter.ColorConverter;
-import com.ahmedslaihh.hepsiburadabackend.dto.ProductDto;
-import com.ahmedslaihh.hepsiburadabackend.model.Brand;
-import com.ahmedslaihh.hepsiburadabackend.model.Color;
-import com.ahmedslaihh.hepsiburadabackend.model.Product;
-import com.ahmedslaihh.hepsiburadabackend.repository.BrandRepository;
-import com.ahmedslaihh.hepsiburadabackend.repository.ColorRepository;
-import com.ahmedslaihh.hepsiburadabackend.repository.ProductRepository;
-import com.ahmedslaihh.hepsiburadabackend.service.ProductService;
+import com.ahmedsalihh.hepsiburadabackend.converter.BrandConverter;
+import com.ahmedsalihh.hepsiburadabackend.converter.ColorConverter;
+import com.ahmedsalihh.hepsiburadabackend.model.Brand;
+import com.ahmedsalihh.hepsiburadabackend.model.ProductRequest;
+import com.ahmedsalihh.hepsiburadabackend.repository.ColorRepository;
+import com.ahmedsalihh.hepsiburadabackend.service.ProductService;
+import com.ahmedsalihh.hepsiburadabackend.dto.ProductDto;
+import com.ahmedsalihh.hepsiburadabackend.model.Color;
+import com.ahmedsalihh.hepsiburadabackend.model.Product;
+import com.ahmedsalihh.hepsiburadabackend.repository.BrandRepository;
+import com.ahmedsalihh.hepsiburadabackend.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -35,26 +36,20 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public ProductDto getProducts(int page,
-                                  int size,
-                                  String name,
-                                  Long color,
-                                  Long brand,
-                                  String orderBy,
-                                  String direction) {
-        Pageable paging = PageRequest.of(page, size, getSorting(orderBy, direction));
+    public ProductDto getProducts(ProductRequest request) {
+        Pageable paging = PageRequest.of(request.getPage(), request.getSize(), getSorting(request.getOrderBy(), request.getDirection()));
 
         Page<Product> pageProducts;
-        if (color == null) {
-            if (brand == null) {
-                pageProducts = productRepository.findAllByNameContaining(name, paging);
+        if (request.getColor() == null) {
+            if (request.getBrand() == null) {
+                pageProducts = productRepository.findByNameContaining(request.getName(), paging);
             } else {
-                pageProducts = productRepository.findBySelectedCriteriaWithBrand(name, brand, paging);
+                pageProducts = productRepository.findBySelectedCriteriaWithBrand(request.getName(), request.getBrand(), paging);
             }
-        } else if (brand == null) {
-            pageProducts = productRepository.findBySelectedCriteriaWithColor(name, color, paging);
+        } else if (request.getBrand() == null) {
+            pageProducts = productRepository.findBySelectedCriteriaWithColor(request.getName(), request.getColor(), paging);
         } else {
-            pageProducts = productRepository.findBySelectedCriteria(name, brand, color, paging);
+            pageProducts = productRepository.findBySelectedCriteria(request.getName(), request.getBrand(), request.getColor(), paging);
         }
 
         List<Product> productList = pageProducts.getContent();

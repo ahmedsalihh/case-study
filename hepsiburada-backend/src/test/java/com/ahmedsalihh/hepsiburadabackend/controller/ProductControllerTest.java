@@ -1,7 +1,7 @@
-package com.ahmedslaihh.hepsiburadabackend.controller;
+package com.ahmedsalihh.hepsiburadabackend.controller;
 
-import com.ahmedslaihh.hepsiburadabackend.model.Product;
-import com.ahmedslaihh.hepsiburadabackend.repository.ProductRepository;
+import com.ahmedsalihh.hepsiburadabackend.repository.ProductRepository;
+import com.ahmedsalihh.hepsiburadabackend.model.Product;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
@@ -43,7 +43,7 @@ class ProductControllerTest {
 
         doReturn(pageMock)
                 .when(productRepository)
-                .findAllByNameContaining(isA(String.class), isA(Pageable.class));
+                .findByNameContaining(isA(String.class), isA(Pageable.class));
 
         mockMvc.perform(get("/products")
                         .contentType(MediaType.APPLICATION_JSON))

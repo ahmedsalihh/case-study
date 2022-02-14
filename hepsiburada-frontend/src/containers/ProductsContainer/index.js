@@ -1,14 +1,14 @@
 import { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
-// import Pagination from '../../components/Pagination';
+import Pagination from '../../components/Pagination';
 
 import ProductCard from '../../components/ProductCard';
 import { addToBasket } from '../../redux/actions/basketActions';
 
 import {
   fetchProducts,
-  // setCurrentPage,
+  setCurrentPage,
 } from '../../redux/actions/productsActions';
 
 import './index.css';
@@ -46,9 +46,9 @@ const ProductsContainer = ({
     dispatch(addToBasket(item));
   };
 
-  // const handlePageChange = page => {
-  //   dispatch(setCurrentPage(page));
-  // };
+  const handlePageChange = page => {
+    dispatch(setCurrentPage(page - 1));
+  };
 
   return (
     <>
@@ -63,16 +63,14 @@ const ProductsContainer = ({
             />
           ))}
       </div>
-      {/* {products && products.length >= 12 ? (
-        <div className='pagination-container'>
-          <Pagination
-            dataLength={products ? products.length : 0}
-            pageLimit={7}
-            dataLimit={12}
-            onPageChange={handlePageChange}
-          />
-        </div>
-      ) : null} */}
+      <div className='pagination-container'>
+        <Pagination
+          dataLength={products ? products.length : 0}
+          pageLimit={3}
+          dataLimit={12}
+          onPageChange={handlePageChange}
+        />
+      </div>
     </>
   );
 };

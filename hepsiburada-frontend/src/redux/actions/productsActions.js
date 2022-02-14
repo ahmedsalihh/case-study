@@ -1,10 +1,5 @@
 import axios from 'axios';
-import {
-  getBrandParam,
-  getColorParam,
-  getSearchParam,
-  getSortingParam,
-} from '../../utils/functions';
+import { getSortingParam } from '../../utils/functions';
 import paths from '../../utils/path';
 import {
   FETCH_PRODUCTS_ERROR,
@@ -22,14 +17,17 @@ export const fetchProducts =
       searchText,
       page,
     );
-    const url = `${paths.PRODUCTS}?page=${page}${getColorParam(
-      selectedColor,
-    )}${getBrandParam(selectedBrand)}${getSearchParam(
-      searchText,
-    )}${getSortingParam(selectedSortingType)}`;
+    const request = {
+      page,
+      name: searchText ? searchText : '',
+      color: selectedColor && selectedColor.id,
+      brand: selectedBrand && selectedBrand.id,
+      ...getSortingParam(selectedSortingType),
+    };
+    const url = paths.PRODUCTS;
 
     try {
-      const response = await axios.get(url);
+      const response = await axios.post(url, request);
       dispatch(fetchProductsSuccess(response.data));
     } catch (error) {
       dispatch(fetchProductsError(error));

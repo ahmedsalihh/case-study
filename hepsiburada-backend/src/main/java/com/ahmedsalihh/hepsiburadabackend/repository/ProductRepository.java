@@ -1,6 +1,6 @@
-package com.ahmedslaihh.hepsiburadabackend.repository;
+package com.ahmedsalihh.hepsiburadabackend.repository;
 
-import com.ahmedslaihh.hepsiburadabackend.model.Product;
+import com.ahmedsalihh.hepsiburadabackend.model.Product;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.Query;
@@ -30,8 +30,8 @@ public interface ProductRepository extends PagingAndSortingRepository<Product, L
                                          Long brand,
                                          Pageable pageable);
 
-    @Query(value = "SELECT * FROM product WHERE product.name LIKE CONCAT('%', ?1, '%') \n-- #pageable\n",
-            countQuery = "SELECT count(*) FROM product WHERE product.name LIKE CONCAT('%', ?1, '%')",
-            nativeQuery = true)
-    Page<Product> findAllByNameContaining(String name, Pageable pageable);
+//    @Query(value = "SELECT * FROM product WHERE product.name LIKE CONCAT('%', ?1, '%') \n-- #pageable\n",
+//            countQuery = "SELECT count(*) FROM product WHERE product.name LIKE CONCAT('%', ?1, '%')",
+//            nativeQuery = true)
+    Page<Product> findByNameContaining(String name, Pageable pageable);
 }

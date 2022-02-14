@@ -6,9 +6,9 @@
 # Run
 
 - Open terminal
-- Go to project direcoty
+- Go to project directory
 - run `docker-compose up` command
-- Open your browser tpye http://127.0.0.1
+- Open your browser type http://127.0.0.1
 
 
 

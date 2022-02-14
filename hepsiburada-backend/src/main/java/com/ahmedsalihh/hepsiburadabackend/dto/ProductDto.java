@@ -1,6 +1,6 @@
-package com.ahmedslaihh.hepsiburadabackend.dto;
+package com.ahmedsalihh.hepsiburadabackend.dto;
 
-import com.ahmedslaihh.hepsiburadabackend.model.Product;
+import com.ahmedsalihh.hepsiburadabackend.model.Product;
 import lombok.Data;
 
 import java.util.List;

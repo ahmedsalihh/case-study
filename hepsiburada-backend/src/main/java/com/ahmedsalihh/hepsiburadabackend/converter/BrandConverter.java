@@ -1,8 +1,8 @@
-package com.ahmedslaihh.hepsiburadabackend.converter;
+package com.ahmedsalihh.hepsiburadabackend.converter;
 
-import com.ahmedslaihh.hepsiburadabackend.dto.BrandDto;
-import com.ahmedslaihh.hepsiburadabackend.model.Brand;
-import com.ahmedslaihh.hepsiburadabackend.model.Product;
+import com.ahmedsalihh.hepsiburadabackend.model.Brand;
+import com.ahmedsalihh.hepsiburadabackend.dto.BrandDto;
+import com.ahmedsalihh.hepsiburadabackend.model.Product;
 
 import java.util.List;
 import java.util.stream.Collectors;

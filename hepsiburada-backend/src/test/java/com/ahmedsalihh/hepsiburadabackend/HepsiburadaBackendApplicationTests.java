@@ -1,4 +1,4 @@
-package com.ahmedslaihh.hepsiburadabackend;
+package com.ahmedsalihh.hepsiburadabackend;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

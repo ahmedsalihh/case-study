@@ -12,7 +12,7 @@ const defaultState = {
   selectedColor: null,
   selectedBrand: null,
   selectedSortingType: sortingTypes[0],
-  page: 1,
+  page: 0,
   error: null,
 };
 

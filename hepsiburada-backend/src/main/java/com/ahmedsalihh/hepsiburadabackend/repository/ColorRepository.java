@@ -1,6 +1,6 @@
-package com.ahmedslaihh.hepsiburadabackend.repository;
+package com.ahmedsalihh.hepsiburadabackend.repository;
 
-import com.ahmedslaihh.hepsiburadabackend.model.Color;
+import com.ahmedsalihh.hepsiburadabackend.model.Color;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 

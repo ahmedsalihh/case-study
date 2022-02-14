@@ -1,4 +1,4 @@
-package com.ahmedslaihh.hepsiburadabackend.model;
+package com.ahmedsalihh.hepsiburadabackend.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
@@ -10,11 +10,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "color")
+@Table(name = "brand")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Color {
+public class Brand {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
