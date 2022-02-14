@@ -11,14 +11,12 @@ import com.ahmedslaihh.hepsiburadabackend.repository.ColorRepository;
 import com.ahmedslaihh.hepsiburadabackend.repository.ProductRepository;
 import com.ahmedslaihh.hepsiburadabackend.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Sort;
-import org.springframework.stereotype.Service;
-
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.stereotype.Service;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -73,7 +71,7 @@ public class ProductServiceImpl implements ProductService {
     }
 
     private Sort getSorting(String orderBy, String direction) {
-        if (direction.equals("ASC")) {
+        if (direction.equalsIgnoreCase("ASC")) {
             return Sort.by(orderBy).ascending();
         }
         return Sort.by(orderBy).descending();
