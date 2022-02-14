@@ -33,16 +33,13 @@ const Header = ({ dispatch, searchText, selectedSortingType }) => {
   );
 };
 
-Header.defaultProps = {
-  searchText: 'iphone 11',
-};
-
 const mapDispatchToProps = dispatch => ({
   dispatch,
 });
 
 const mapStateToProps = state => ({
   selectedSortingType: state.filters.selectedSortingType,
+  searchText: state.search.text,
 });
 
 const withConnect = connect(mapStateToProps, mapDispatchToProps);
